@@ -101,6 +101,7 @@ namespace Valve.VR.InteractionSystem
 		//-------------------------------------------------
 		void OnCollisionEnter( Collision collision )
 		{
+			//Only check for collisions if the arrow is in flight
 			if ( inFlight )
 			{
 				Rigidbody rb = GetComponent<Rigidbody>();
