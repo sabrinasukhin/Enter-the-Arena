@@ -8,18 +8,19 @@ public class Break : MonoBehaviour {
 	public Camera fbcam;
 	public float threshold = 3f;
 	private bool broken = false;
-	private int timer = 0;
+	private float timer = 0;
 
 	// Use this for initialization
 	void Start() {
 		//Add something in here later on that prevents the sword from hurting the person holding it
 		//Physics.IgnoreCollision(sword.GetComponent<Collider>(), Player.instance.headCollider );
 		fbcam = Camera.main;
+		sword = GetComponent<Rigidbody>();
 	}
 	
 	void Update() {
 		if(broken) {
-			timer--;
+			timer -= Time.deltaTime;
 			if(timer <= 0) {
 				broken = false;
 				timer = 0;
@@ -38,7 +39,7 @@ public class Break : MonoBehaviour {
 		}
 	}
 
-	void OnCollisionEnter(Collision collision) {
+	void OnTriggerEnter(Collider collision) {
 		if(gameObject.CompareTag("Offense")) {
 			if(collision.gameObject.CompareTag("Defense")) {
 				Breaker(gameObject);
@@ -52,6 +53,6 @@ public class Break : MonoBehaviour {
 	void Breaker(GameObject o) {
 		o.transform.localScale = new Vector3(0, 0, 0);
 		broken = true;
-		timer = 300;
+		timer = 3;
 	}
 }
