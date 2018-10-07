@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571334, b: 0.3069219, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 1687161930}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Defense
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -395,7 +395,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1687161929}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.61, y: 0.49, z: 3.65}
+  m_LocalPosition: {x: 3, y: 0.5, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -410,15 +410,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4248615001092248, guid: 374e4e739d3b7b940a1238908aa1b7bf, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.93
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4248615001092248, guid: 374e4e739d3b7b940a1238908aa1b7bf, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.227
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4248615001092248, guid: 374e4e739d3b7b940a1238908aa1b7bf, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 2.25
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4248615001092248, guid: 374e4e739d3b7b940a1238908aa1b7bf, type: 2}
       propertyPath: m_LocalRotation.x
@@ -443,6 +443,20 @@ Prefab:
     - target: {fileID: 1916541731735340, guid: 374e4e739d3b7b940a1238908aa1b7bf, type: 2}
       propertyPath: m_Name
       value: Cylinder
+      objectReference: {fileID: 0}
+    - target: {fileID: 1916541731735340, guid: 374e4e739d3b7b940a1238908aa1b7bf, type: 2}
+      propertyPath: m_TagString
+      value: Offense
+      objectReference: {fileID: 0}
+    - target: {fileID: 114078260134681696, guid: 374e4e739d3b7b940a1238908aa1b7bf,
+        type: 2}
+      propertyPath: threshold
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 54406386518041142, guid: 374e4e739d3b7b940a1238908aa1b7bf,
+        type: 2}
+      propertyPath: m_UseGravity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 374e4e739d3b7b940a1238908aa1b7bf, type: 2}

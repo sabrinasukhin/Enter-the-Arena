@@ -6,7 +6,9 @@ public class Break : MonoBehaviour {
 	public Rigidbody sword;
 	public GameObject player;
 	public Camera fbcam;
-	private int threshold = 3;
+	public float threshold = 3f;
+	private bool broken = false;
+	private int timer = 0;
 
 	// Use this for initialization
 	void Start() {
@@ -16,24 +18,40 @@ public class Break : MonoBehaviour {
 	}
 	
 	void Update() {
-		fbcam = Camera.main;
-		float distance = Vector3.Distance(gameObject.transform.position, fbcam.gameObject.transform.position);
-		if(gameObject.CompareTag("Defense") && distance > threshold) {
-			gameObject.tag = "Offense";
+		if(broken) {
+			timer--;
+			if(timer <= 0) {
+				broken = false;
+				timer = 0;
+				gameObject.transform.localScale = new Vector3(0.1f, 1, 0.1f);
+			}
 		}
-		else if(gameObject.CompareTag("Offense") && distance <= threshold) {
-			gameObject.tag = "Defense";
+		if(!broken) {
+			fbcam = Camera.main;
+			float distance = Vector3.Distance(gameObject.transform.position, fbcam.gameObject.transform.position);
+			if(gameObject.CompareTag("Defense") && distance > threshold) {
+				gameObject.tag = "Offense";
+			}
+			else if(gameObject.CompareTag("Offense") && distance <= threshold) {
+				gameObject.tag = "Defense";
+			}
 		}
 	}
 
 	void OnCollisionEnter(Collision collision) {
 		if(gameObject.CompareTag("Offense")) {
 			if(collision.gameObject.CompareTag("Defense")) {
-				Destroy(gameObject);
+				Breaker(gameObject);
 			}
 			else {
-				Destroy(collision.gameObject);
+				Breaker(collision.gameObject);
 			}
 		}
+	}
+
+	void Breaker(GameObject o) {
+		o.transform.localScale = new Vector3(0, 0, 0);
+		broken = true;
+		timer = 300;
 	}
 }
