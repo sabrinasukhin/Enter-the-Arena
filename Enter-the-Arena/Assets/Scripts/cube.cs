@@ -17,7 +17,7 @@ public class cube : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-       // Instantiate(gameObject);
-        //Destroy(gameObject);
+        Instantiate(gameObject);
+        Destroy(gameObject);
     }
 }
