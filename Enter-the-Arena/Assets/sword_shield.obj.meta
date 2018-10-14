@@ -1,17 +1,28 @@
 fileFormatVersion: 2
-guid: c29c4c016d7f74c4b8cdecca12791715
+guid: 92aa44dd084a04b9c82379d22e9b02fc
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: blade
-    100002: //RootNode
+    100002: hilt
+    100004: shield
+    100006: //RootNode
     400000: blade
-    400002: //RootNode
-    2100000: bladeMat
-    2100002: blinn1SG
+    400002: hilt
+    400004: shield
+    400006: //RootNode
+    2100000: blinn1SG
+    2100002: lambert2SG
+    2100004: lambert5SG
     2300000: blade
+    2300002: hilt
+    2300004: shield
     3300000: blade
+    3300002: hilt
+    3300004: shield
     4300000: blade
+    4300002: hilt
+    4300004: shield
   externalObjects: {}
   materials:
     importMaterials: 1
