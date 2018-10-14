@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33173422103263730}
   - component: {fileID: 23509889027200838}
   m_Layer: 0
-  m_Name: swordTemp
+  m_Name: SwordTemp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,4 +168,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ca2667e5200548248bce394d8609728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threshold: 3
+  sword: {fileID: 0}
+  player: {fileID: 0}
+  fbcam: {fileID: 0}
