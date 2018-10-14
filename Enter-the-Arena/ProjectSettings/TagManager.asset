@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Defense
   - Offense
+  - FBCam
   layers:
   - Default
   - TransparentFX
