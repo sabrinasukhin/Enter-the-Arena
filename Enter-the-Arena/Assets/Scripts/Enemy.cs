@@ -15,9 +15,10 @@ public class Enemy : MonoBehaviour {
 		Move();
 	}
 
-    void OnCollisionEnter(Collision collision) {
-        if(collision.GameObject == player) {
+    void OnTriggerEnter(Collider collision) {
+        if(GameObject.ReferenceEquals(gameObject, collision.gameObject)) {
             //Kill the fool
+            Destroy(player.GameObject);
         }
     }
 
