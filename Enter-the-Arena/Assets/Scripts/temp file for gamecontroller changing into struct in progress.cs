@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameController : MonoBehaviour {
-	public GameObject enemy1;
-	public GameObject enemy2;
 	public GameObject[] enemies; //array of GameObeject to spawn.
 	public int[] enemyNum; //array of number of each enemy to spawn corresponding to enemy
 	public int enemyCount;
