@@ -9,6 +9,8 @@ public class Break : MonoBehaviour {
 	public float threshold = 3f;
 	private bool broken = false;
 	private float timer = 0;
+	private Renderer rend;
+	private Vector3 og;
 
 	// Use this for initialization
 	void Start() {
@@ -16,6 +18,8 @@ public class Break : MonoBehaviour {
 		//Physics.IgnoreCollision(sword.GetComponent<Collider>(), Player.instance.headCollider );
 		fbcam = Camera.main;
 		sword = GetComponent<Rigidbody>();
+		rend = GetComponent<Renderer>();
+		og = gameObject.transform.position;
 	}
 	
 	void Update() {
@@ -24,16 +28,17 @@ public class Break : MonoBehaviour {
 			if(timer <= 0) {
 				broken = false;
 				timer = 0;
-				gameObject.transform.localScale = new Vector3(0.1f, 1, 0.1f);
+				gameObject.transform.localScale = og;
+				rend.enabled = true;
 			}
 		}
 		if(!broken) {
 			fbcam = Camera.main;
 			float distance = Vector3.Distance(gameObject.transform.position, fbcam.gameObject.transform.position);
-			if(gameObject.CompareTag("Defense") && distance > threshold) {
+			if(distance > threshold) {
 				gameObject.tag = "Offense";
 			}
-			else if(gameObject.CompareTag("Offense") && distance <= threshold) {
+			else if(distance <= threshold) {
 				gameObject.tag = "Defense";
 			}
 		}
@@ -54,5 +59,6 @@ public class Break : MonoBehaviour {
 		o.transform.localScale = new Vector3(0, 0, 0);
 		broken = true;
 		timer = 3;
+		rend.enabled = false;
 	}
 }
