@@ -14,7 +14,6 @@ public class GameController : MonoBehaviour {
 		}
 	}
 	public miniW[] miniWave;
-	public int enemyCount;
 	public float spawnWait;
 	public int enemyLeftInWave;
 	
