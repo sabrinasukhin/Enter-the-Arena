@@ -19,13 +19,10 @@ public class Enemy : MonoBehaviour {
 	private void OnTriggerEnter(Collider collision)
     {
     	if(collision.gameObject.name == "Player") {
-			Destroy(collision.gameObject);
+			GameObject.Find("Player").GetComponent<PlayerConstants>().health -=1;
+			Destroy(gameObject);
+			GameObject.Find("GameController").GetComponent<GameController>().enemyLeftInWave -=1;
 		}
-    	if (collision.gameObject.CompareTag("Offense")){
-    		GameObject.Find("GameController").GetComponent<GameController>().enemyLeftInWave -=1;
-    		Destroy(gameObject);
-    	}
-    	
     }
 
 	void Move() {
