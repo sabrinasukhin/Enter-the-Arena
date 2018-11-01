@@ -6,9 +6,11 @@ public class Enemy : MonoBehaviour {
 
 	public GameObject player;
 	public float speed;
+	private Vector3 velocity;
+    private Vector3 gravity = new Vector3(0f,0.001f,0f);
 	// Use this for initialization
 	void Start () {
-		
+		velocity = new Vector3(speed,1f,0f);
 	}
 	
 	// Update is called once per frame
@@ -26,6 +28,7 @@ public class Enemy : MonoBehaviour {
     }
 
 	void Move() {
-		gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, player.transform.position, speed * Time.deltaTime);
+		velocity -= gravity;
+        gameObject.transform.position += velocity;
 	}
 }
