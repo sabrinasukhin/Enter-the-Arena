@@ -8,6 +8,8 @@ ModelImporter:
     400000: hilt
     400002: //RootNode
     2100000: hiltMat
+    2100002: lambert2SG
+    2100004: lambert5SG
     2300000: hilt
     3300000: hilt
     4300000: hilt

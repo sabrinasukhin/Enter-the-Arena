@@ -8,6 +8,8 @@ ModelImporter:
     400000: shield
     400002: //RootNode
     2100000: shieldMat
+    2100002: lambert5SG
+    2100004: lambert2SG
     2300000: shield
     3300000: shield
     4300000: shield

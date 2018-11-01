@@ -168,4 +168,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ca2667e5200548248bce394d8609728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threshold: 3
+  sword: {fileID: 0}
+  player: {fileID: 0}
+  fbcam: {fileID: 0}
