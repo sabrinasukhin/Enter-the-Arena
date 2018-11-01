@@ -32,6 +32,7 @@ public class Break : MonoBehaviour {
 				rend.enabled = true;
 			}
 		}
+		//Mode changing
 		if(!broken) {
 			fbcam = Camera.main;
 			float distance = Vector3.Distance(gameObject.transform.position, fbcam.gameObject.transform.position);
