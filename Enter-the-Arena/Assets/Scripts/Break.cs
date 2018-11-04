@@ -5,7 +5,8 @@ using UnityEngine;
 public class Break : MonoBehaviour {
 	private Rigidbody sword;
 	private GameObject player; //Not applied yet, look at Start for more info
-	private Camera fbcam;
+	private GameObject fbcam;
+    private GameObject controller;
 	public float threshold = 3f;
 	private bool broken = false;
 	private float timer = 0;
@@ -16,31 +17,41 @@ public class Break : MonoBehaviour {
 	void Start() {
 		//Add something in here later on that prevents the sword from hurting the person holding it
 		//Physics.IgnoreCollision(sword.GetComponent<Collider>(), Player.instance.headCollider );
-		fbcam = Camera.main;
+		fbcam = GameObject.FindWithTag("Player");
+        controller = GameObject.FindWithTag("RHand");
 		sword = GetComponent<Rigidbody>();
 		rend = GetComponent<Renderer>();
-		og = gameObject.transform.position;
+		og = gameObject.transform.localScale;
 	}
 	
 	void Update() {
-		if(broken) {
-			timer -= Time.deltaTime;
+        controller = GameObject.FindWithTag("RHand");
+        fbcam = GameObject.FindWithTag("Player");
+        float sx = controller.gameObject.transform.position.x;
+        float sz = controller.gameObject.transform.position.y;
+        float cx = fbcam.gameObject.transform.position.x;
+        float cz = fbcam.gameObject.transform.position.y;
+        Vector2 s = new Vector2(sx, sz);
+        Vector2 c = new Vector2(cx, cz);
+        float distance = Vector2.Distance(s, c);
+        if (distance > threshold)
+        {
+            gameObject.tag = "Offense";
+        }
+        else if (distance <= threshold)
+        {
+            gameObject.tag = "Defense";
+        }
+        if (broken) {
+            if (gameObject.tag == "Defense")
+            {
+                timer -= Time.deltaTime;
+            }
 			if(timer <= 0) {
 				broken = false;
 				timer = 0;
 				gameObject.transform.localScale = og;
 				rend.enabled = true;
-			}
-		}
-		//Mode changing
-		if(!broken) {
-			fbcam = Camera.main;
-			float distance = Vector3.Distance(gameObject.transform.position, fbcam.gameObject.transform.position);
-			if(distance > threshold) {
-				gameObject.tag = "Offense";
-			}
-			else if(distance <= threshold) {
-				gameObject.tag = "Defense";
 			}
 		}
 	}
@@ -50,16 +61,23 @@ public class Break : MonoBehaviour {
 			if(collision.gameObject.CompareTag("Defense")) {
 				Breaker(gameObject);
 			}
-			else {
-				Breaker(collision.gameObject);
+			else if(!collision.gameObject.CompareTag("Player")){
+				Kill(collision.gameObject);
 			}
 		}
 	}
 
-	void Breaker(GameObject o) {
-		o.transform.localScale = new Vector3(0, 0, 0);
-		broken = true;
-		timer = 3;
-		rend.enabled = false;
-	}
+    void Kill(GameObject o)
+    {
+        Destroy(o);
+        GameObject.Find("GameController").GetComponent<GameController>().enemyLeftInWave -= 1;
+    }
+
+    void Breaker(GameObject o)
+    {
+        o.GetComponent<Renderer>().enabled = false;
+        broken = true;
+        gameObject.transform.localScale = Vector3.zero;
+        timer = 0.5f;
+    }
 }

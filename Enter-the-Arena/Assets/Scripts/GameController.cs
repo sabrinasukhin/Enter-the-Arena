@@ -24,7 +24,7 @@ public class GameController : MonoBehaviour {
 	}
 	void spawn (miniW miniWave){
 		for (int i = 0; i<miniWave.enemyNum; i++){
-			miniWave.enemies.transform.position = new Vector3(i*5, i*5+10, 0);
+			miniWave.enemies.transform.position = new Vector3(7, 2, 0);
 			Instantiate(miniWave.enemies);
 		}
 	}
