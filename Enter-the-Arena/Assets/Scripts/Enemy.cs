@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour {
     void OnTriggerEnter(Collider collision) {
         if(GameObject.ReferenceEquals(gameObject, collision.gameObject)) {
             //Kill the fool
-            Destroy(player.GameObject);
+            Destroy(player.gameObject);
         }
     }
 
