@@ -20,17 +20,24 @@ public class GameController : MonoBehaviour {
 	public miniW[] miniWave;
 	public float spawnWait;
 	public GameObject enemyType1;
+	public GameObject enemyType2; 
 	public int enemyLeftInWave;
 	
 	// Use this for initialization
 	void Start (){
-		miniWave = new miniW[5];
+		miniWave = new miniW[2];
+
 		Vector3[] wave0Spawn = new Vector3[10];
 		for(int i = 0; i < 10; i++) {
-			wave0Spawn[i] = new Vector3(5, 5, 5);
+			wave0Spawn[i] = new Vector3(5, 0, 5);
 		}
 		miniW wave0 = new miniW(10, enemyType1, wave0Spawn);
 		miniWave[0] = wave0;
+
+		Vector3[] wave1Spawn = new Vector[2];
+		wave1Spawn[0] = new Vector3(5, 0, 5);
+		wave1Spawn[1] = new Vector(-5, 0, -5);
+		miniW wave1 = new miniW(2, enemyType2, wave1Spawn);
 		StartCoroutine(spawnWave());
 	}
 	void spawn (miniW miniWave){
