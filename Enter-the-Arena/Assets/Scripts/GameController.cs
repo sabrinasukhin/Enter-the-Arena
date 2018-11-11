@@ -34,9 +34,9 @@ public class GameController : MonoBehaviour {
 		miniW wave0 = new miniW(10, enemyType1, wave0Spawn);
 		miniWave[0] = wave0;
 
-		Vector3[] wave1Spawn = new Vector[2];
+		Vector3[] wave1Spawn = new Vector[32];
 		wave1Spawn[0] = new Vector3(5, 0, 5);
-		wave1Spawn[1] = new Vector(-5, 0, -5);
+		wave1Spawn[1] = new Vector3(-5, 0, -5);
 		miniW wave1 = new miniW(2, enemyType2, wave1Spawn);
 		StartCoroutine(spawnWave());
 	}
