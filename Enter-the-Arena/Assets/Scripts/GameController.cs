@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameController : MonoBehaviour {
-	[System.Serializable] //Seems amazing
 	public class miniW{
 		public int enemyNum;
 		public GameObject enemies;
