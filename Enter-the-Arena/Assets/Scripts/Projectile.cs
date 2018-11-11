@@ -24,5 +24,10 @@ public class Projectile : MonoBehaviour {
             Destroy(gameObject);
             GameObject.Find("GameController").GetComponent<GameController>().enemyLeftInWave -=1;
         }
+        else if(collision.CompareTag("Ground")){
+            Destroy(gameObject);
+            GameObject.Find("GameController").GetComponent<GameController>().enemyLeftInWave -=1;
+        }
     }
+
 }

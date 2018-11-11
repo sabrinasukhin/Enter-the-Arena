@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameController : MonoBehaviour {
-	[System.Serializable] //Seems amazing
 	public class miniW{
 		public int enemyNum;
 		public GameObject enemies;
@@ -29,15 +28,16 @@ public class GameController : MonoBehaviour {
 
 		Vector3[] wave0Spawn = new Vector3[10];
 		for(int i = 0; i < 10; i++) {
-			wave0Spawn[i] = new Vector3(5, 0, 5);
+			wave0Spawn[i] = new Vector3(i*5, 2, i*5);
 		}
 		miniW wave0 = new miniW(10, enemyType1, wave0Spawn);
 		miniWave[0] = wave0;
 
-		Vector3[] wave1Spawn = new Vector[2];
-		wave1Spawn[0] = new Vector3(5, 0, 5);
-		wave1Spawn[1] = new Vector(-5, 0, -5);
+		Vector3[] wave1Spawn = new Vector3[2];
+		wave1Spawn[0] = new Vector3(5, 1, 5);
+		wave1Spawn[1] = new Vector3(-5, 1, -5);
 		miniW wave1 = new miniW(2, enemyType2, wave1Spawn);
+		miniWave[1] = wave1;
 		StartCoroutine(spawnWave());
 	}
 	void spawn (miniW miniWave){
