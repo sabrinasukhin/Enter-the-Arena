@@ -1,0 +1,192 @@
+fileFormatVersion: 2
+guid: 0337c31bfcc2f4288af79f61481c48da
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: l_palm_left_hand_hands_player
+    100002: left_hand_hands_player_fingers_l_mid_l_mid_bot
+    100004: left_hand_hands_player_fingers_l_mid_l_mid_mid
+    100006: left_hand_hands_player_fingers_l_mid_top_l_mid
+    100008: left_hand_hands_player_fingers_l_pinky_l_pinky_bot
+    100010: left_hand_hands_player_fingers_l_pinky_l_pinky_mid
+    100012: left_hand_hands_player_fingers_l_pinky_top_l_pinky
+    100014: left_hand_hands_player_fingers_l_ring_l_ring_bot
+    100016: left_hand_hands_player_fingers_l_ring_l_ring_mid
+    100018: left_hand_hands_player_fingers_l_ring_top_l_ring
+    100020: left_hand_hands_player_l_index_fingers_l_index_bot
+    100022: left_hand_hands_player_l_index_fingers_l_index_mid
+    100024: left_hand_hands_player_l_index_top_l_index_fingers
+    100026: left_hand_hands_player_l_thumb_l_thumb_bot
+    100028: left_hand_hands_player_l_thumb_l_thumb_mid
+    100030: left_hand_hands_player_l_thumb_top_l_thumb
+    100032: left_hand_hands_player_shield
+    100034: //RootNode
+    400000: l_palm_left_hand_hands_player
+    400002: left_hand_hands_player_fingers_l_mid_l_mid_bot
+    400004: left_hand_hands_player_fingers_l_mid_l_mid_mid
+    400006: left_hand_hands_player_fingers_l_mid_top_l_mid
+    400008: left_hand_hands_player_fingers_l_pinky_l_pinky_bot
+    400010: left_hand_hands_player_fingers_l_pinky_l_pinky_mid
+    400012: left_hand_hands_player_fingers_l_pinky_top_l_pinky
+    400014: left_hand_hands_player_fingers_l_ring_l_ring_bot
+    400016: left_hand_hands_player_fingers_l_ring_l_ring_mid
+    400018: left_hand_hands_player_fingers_l_ring_top_l_ring
+    400020: left_hand_hands_player_l_index_fingers_l_index_bot
+    400022: left_hand_hands_player_l_index_fingers_l_index_mid
+    400024: left_hand_hands_player_l_index_top_l_index_fingers
+    400026: left_hand_hands_player_l_thumb_l_thumb_bot
+    400028: left_hand_hands_player_l_thumb_l_thumb_mid
+    400030: left_hand_hands_player_l_thumb_top_l_thumb
+    400032: left_hand_hands_player_shield
+    400034: //RootNode
+    2100000: l_palm_left_hand_hands_playerMat
+    2100002: left_hand_hands_player_fingers_l_mid_l_mid_botMat
+    2100004: left_hand_hands_player_fingers_l_mid_l_mid_midMat
+    2100006: left_hand_hands_player_fingers_l_mid_top_l_midMat
+    2100008: left_hand_hands_player_fingers_l_pinky_l_pinky_botMat
+    2100010: left_hand_hands_player_fingers_l_pinky_l_pinky_midMat
+    2100012: left_hand_hands_player_fingers_l_pinky_top_l_pinkyMat
+    2100014: left_hand_hands_player_fingers_l_ring_l_ring_botMat
+    2100016: left_hand_hands_player_fingers_l_ring_l_ring_midMat
+    2100018: left_hand_hands_player_fingers_l_ring_top_l_ringMat
+    2100020: left_hand_hands_player_l_index_fingers_l_index_botMat
+    2100022: left_hand_hands_player_l_index_fingers_l_index_midMat
+    2100024: left_hand_hands_player_l_index_top_l_index_fingersMat
+    2100026: left_hand_hands_player_l_thumb_l_thumb_botMat
+    2100028: left_hand_hands_player_l_thumb_l_thumb_midMat
+    2100030: left_hand_hands_player_l_thumb_top_l_thumbMat
+    2100032: left_hand_hands_player_shieldMat
+    2300000: l_palm_left_hand_hands_player
+    2300002: left_hand_hands_player_fingers_l_mid_l_mid_bot
+    2300004: left_hand_hands_player_fingers_l_mid_l_mid_mid
+    2300006: left_hand_hands_player_fingers_l_mid_top_l_mid
+    2300008: left_hand_hands_player_fingers_l_pinky_l_pinky_bot
+    2300010: left_hand_hands_player_fingers_l_pinky_l_pinky_mid
+    2300012: left_hand_hands_player_fingers_l_pinky_top_l_pinky
+    2300014: left_hand_hands_player_fingers_l_ring_l_ring_bot
+    2300016: left_hand_hands_player_fingers_l_ring_l_ring_mid
+    2300018: left_hand_hands_player_fingers_l_ring_top_l_ring
+    2300020: left_hand_hands_player_l_index_fingers_l_index_bot
+    2300022: left_hand_hands_player_l_index_fingers_l_index_mid
+    2300024: left_hand_hands_player_l_index_top_l_index_fingers
+    2300026: left_hand_hands_player_l_thumb_l_thumb_bot
+    2300028: left_hand_hands_player_l_thumb_l_thumb_mid
+    2300030: left_hand_hands_player_l_thumb_top_l_thumb
+    2300032: left_hand_hands_player_shield
+    3300000: l_palm_left_hand_hands_player
+    3300002: left_hand_hands_player_fingers_l_mid_l_mid_bot
+    3300004: left_hand_hands_player_fingers_l_mid_l_mid_mid
+    3300006: left_hand_hands_player_fingers_l_mid_top_l_mid
+    3300008: left_hand_hands_player_fingers_l_pinky_l_pinky_bot
+    3300010: left_hand_hands_player_fingers_l_pinky_l_pinky_mid
+    3300012: left_hand_hands_player_fingers_l_pinky_top_l_pinky
+    3300014: left_hand_hands_player_fingers_l_ring_l_ring_bot
+    3300016: left_hand_hands_player_fingers_l_ring_l_ring_mid
+    3300018: left_hand_hands_player_fingers_l_ring_top_l_ring
+    3300020: left_hand_hands_player_l_index_fingers_l_index_bot
+    3300022: left_hand_hands_player_l_index_fingers_l_index_mid
+    3300024: left_hand_hands_player_l_index_top_l_index_fingers
+    3300026: left_hand_hands_player_l_thumb_l_thumb_bot
+    3300028: left_hand_hands_player_l_thumb_l_thumb_mid
+    3300030: left_hand_hands_player_l_thumb_top_l_thumb
+    3300032: left_hand_hands_player_shield
+    4300000: l_palm_left_hand_hands_player
+    4300002: left_hand_hands_player_fingers_l_mid_l_mid_bot
+    4300004: left_hand_hands_player_fingers_l_mid_l_mid_mid
+    4300006: left_hand_hands_player_fingers_l_mid_top_l_mid
+    4300008: left_hand_hands_player_fingers_l_pinky_l_pinky_bot
+    4300010: left_hand_hands_player_fingers_l_pinky_l_pinky_mid
+    4300012: left_hand_hands_player_fingers_l_pinky_top_l_pinky
+    4300014: left_hand_hands_player_fingers_l_ring_l_ring_bot
+    4300016: left_hand_hands_player_fingers_l_ring_l_ring_mid
+    4300018: left_hand_hands_player_fingers_l_ring_top_l_ring
+    4300020: left_hand_hands_player_l_index_fingers_l_index_bot
+    4300022: left_hand_hands_player_l_index_fingers_l_index_mid
+    4300024: left_hand_hands_player_l_index_top_l_index_fingers
+    4300026: left_hand_hands_player_l_thumb_l_thumb_bot
+    4300028: left_hand_hands_player_l_thumb_l_thumb_mid
+    4300030: left_hand_hands_player_l_thumb_top_l_thumb
+    4300032: left_hand_hands_player_shield
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
