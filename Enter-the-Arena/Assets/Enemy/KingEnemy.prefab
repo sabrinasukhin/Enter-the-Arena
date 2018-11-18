@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4136633218967500}
-  - component: {fileID: 114750709284211728}
+  - component: {fileID: 114110134158506866}
   m_Layer: 0
   m_Name: pawn_right_front
   m_TagString: Untagged
@@ -65,7 +65,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4982174006536114}
-  - component: {fileID: 114179212557207370}
+  - component: {fileID: 114782474035376968}
   m_Layer: 0
   m_Name: pawn_right_back
   m_TagString: Untagged
@@ -377,7 +377,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4561667548809710}
-  - component: {fileID: 114504758481368424}
+  - component: {fileID: 114910448347861926}
   m_Layer: 0
   m_Name: pawn_left_front
   m_TagString: Untagged
@@ -408,7 +408,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4706194505981996}
-  - component: {fileID: 114761455699328122}
+  - component: {fileID: 114136537937832640}
   m_Layer: 0
   m_Name: pawn_left_back
   m_TagString: Untagged
@@ -547,7 +547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4569286131205466}
   - component: {fileID: 95232151685581240}
-  - component: {fileID: 114484389167954604}
+  - component: {fileID: 114621722377992816}
   m_Layer: 0
   m_Name: KingEnemy
   m_TagString: Untagged
@@ -1022,8 +1022,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1835125671111632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: 1, z: -15}
-  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_LocalPosition: {x: 10.107674, y: 17.224304, z: 4.4552503}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4472085781678740}
   - {fileID: 4706194505981996}
@@ -1605,20 +1605,33 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114179212557207370
+--- !u!114 &114110134158506866
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1033354254112378}
+  m_GameObject: {fileID: 1014033194727324}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0ecf54d6f565d7409806f37dbea6e36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1135317853659204, guid: 9e774c55cb1cf4546b7175f4f9c9b507, type: 2}
-  timer: 0.5
---- !u!114 &114484389167954604
+  timer: 1
+--- !u!114 &114136537937832640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1576416686968650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ecf54d6f565d7409806f37dbea6e36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 1135317853659204, guid: 9e774c55cb1cf4546b7175f4f9c9b507, type: 2}
+  timer: 1
+--- !u!114 &114621722377992816
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1631,7 +1644,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   attackThreshold: 8
---- !u!114 &114504758481368424
+--- !u!114 &114782474035376968
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1033354254112378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ecf54d6f565d7409806f37dbea6e36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 1135317853659204, guid: 9e774c55cb1cf4546b7175f4f9c9b507, type: 2}
+  timer: 1
+--- !u!114 &114910448347861926
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1643,33 +1669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1135317853659204, guid: 9e774c55cb1cf4546b7175f4f9c9b507, type: 2}
-  timer: 0.3
---- !u!114 &114750709284211728
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1014033194727324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0ecf54d6f565d7409806f37dbea6e36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 1135317853659204, guid: 9e774c55cb1cf4546b7175f4f9c9b507, type: 2}
-  timer: 0.7
---- !u!114 &114761455699328122
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1576416686968650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0ecf54d6f565d7409806f37dbea6e36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 1135317853659204, guid: 9e774c55cb1cf4546b7175f4f9c9b507, type: 2}
-  timer: 0.2
+  timer: 1
 --- !u!137 &137162496697220810
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
