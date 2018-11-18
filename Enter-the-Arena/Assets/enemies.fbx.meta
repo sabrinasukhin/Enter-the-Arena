@@ -1,0 +1,203 @@
+fileFormatVersion: 2
+guid: 880cdf31322ae46598f5b3f9d72ba5e0
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: ball
+    100002: ball 1
+    100004: ball 2
+    100006: ball 3
+    100008: bn_abdomen
+    100010: bn_head
+    100012: bn_head_end
+    100014: bn_L_back_arm_end
+    100016: bn_L_back_elbow_A
+    100018: bn_L_back_elbow_B
+    100020: bn_L_back_shoulder
+    100022: bn_L_front_arm_end
+    100024: bn_L_front_elbow_A
+    100026: bn_L_front_elbow_B
+    100028: bn_L_front_shoulder
+    100030: bn_L_mid_arm_end
+    100032: bn_L_mid_elbow_A
+    100034: bn_L_mid_elbow_B
+    100036: bn_L_mid_shoulder
+    100038: bn_R_back_arm_end
+    100040: bn_R_back_elbow_A
+    100042: bn_R_back_elbow_B
+    100044: bn_R_back_shoulder
+    100046: bn_R_front_arm_end
+    100048: bn_R_front_elbow_A
+    100050: bn_R_front_elbow_B
+    100052: bn_R_front_shoulder
+    100054: bn_R_mid_arm_end
+    100056: bn_R_mid_elbow_A
+    100058: bn_R_mid_elbow_B
+    100060: bn_R_mid_shoulder
+    100062: //RootNode
+    100064: king
+    100066: king_body
+    100068: pawn_left_back
+    100070: pawn_left_front
+    100072: pawn_right_back
+    100074: pawn_right_front
+    100076: rotary_blades
+    100078: rotary_blades 1
+    100080: rotary_blades 2
+    100082: rotary_blades 3
+    400000: ball
+    400002: ball 1
+    400004: ball 2
+    400006: ball 3
+    400008: bn_abdomen
+    400010: bn_head
+    400012: bn_head_end
+    400014: bn_L_back_arm_end
+    400016: bn_L_back_elbow_A
+    400018: bn_L_back_elbow_B
+    400020: bn_L_back_shoulder
+    400022: bn_L_front_arm_end
+    400024: bn_L_front_elbow_A
+    400026: bn_L_front_elbow_B
+    400028: bn_L_front_shoulder
+    400030: bn_L_mid_arm_end
+    400032: bn_L_mid_elbow_A
+    400034: bn_L_mid_elbow_B
+    400036: bn_L_mid_shoulder
+    400038: bn_R_back_arm_end
+    400040: bn_R_back_elbow_A
+    400042: bn_R_back_elbow_B
+    400044: bn_R_back_shoulder
+    400046: bn_R_front_arm_end
+    400048: bn_R_front_elbow_A
+    400050: bn_R_front_elbow_B
+    400052: bn_R_front_shoulder
+    400054: bn_R_mid_arm_end
+    400056: bn_R_mid_elbow_A
+    400058: bn_R_mid_elbow_B
+    400060: bn_R_mid_shoulder
+    400062: //RootNode
+    400064: king
+    400066: king_body
+    400068: pawn_left_back
+    400070: pawn_left_front
+    400072: pawn_right_back
+    400074: pawn_right_front
+    400076: rotary_blades
+    400078: rotary_blades 1
+    400080: rotary_blades 2
+    400082: rotary_blades 3
+    2100000: pupil_shdr
+    2100002: king_shdr
+    2100004: pupil_shdr1
+    2100006: eye_shdr
+    2300000: ball
+    2300002: ball 1
+    2300004: ball 2
+    2300006: ball 3
+    2300008: rotary_blades
+    2300010: rotary_blades 1
+    2300012: rotary_blades 2
+    2300014: rotary_blades 3
+    3300000: ball
+    3300002: ball 1
+    3300004: ball 2
+    3300006: ball 3
+    3300008: rotary_blades
+    3300010: rotary_blades 1
+    3300012: rotary_blades 2
+    3300014: rotary_blades 3
+    4300000: ball
+    4300002: rotary_blades
+    4300004: ball
+    4300006: rotary_blades
+    4300008: ball
+    4300010: rotary_blades
+    4300012: ball
+    4300014: rotary_blades
+    4300016: king_body
+    9500000: //RootNode
+    13700000: king_body
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
