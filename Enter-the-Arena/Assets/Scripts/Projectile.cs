@@ -8,13 +8,15 @@ public class Projectile : MonoBehaviour {
     private Vector3 direction;
     private GameObject player;
     public int speed = 1;
+    private float timer;
     void Start()
     {
         player = GameObject.FindWithTag("Player");
         rb = GetComponent<Rigidbody>();
         displacement = player.transform.position - gameObject.transform.position;
         direction = new Vector3 (displacement.x/displacement.magnitude, 0, displacement.z/displacement.magnitude);
-        rb.velocity = new Vector3 (speed*direction.x,(4.905f)*displacement.magnitude/speed,speed*direction.z);
+        timer = displacement.magnitude/speed;
+        rb.velocity = new Vector3 (speed*direction.x,displacement.y/timer+(4.905f)*timer,speed*direction.z);
     }
     private void OnTriggerEnter(Collider collision)
     {

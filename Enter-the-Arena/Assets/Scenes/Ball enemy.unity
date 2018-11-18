@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b04ca24f5bf6a1469055e8d4b688b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 11
+  health: 250
 --- !u!1 &991960253
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +201,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 991960253}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -7.54}
+  m_LocalPosition: {x: 2.74, y: 3, z: -10.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -321,9 +321,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac10c178217bcf46ac7925e658e541b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnWait: 0
+  spawnWait: 1
   enemyType1: {fileID: 1190084666773610, guid: 33f47cd71e48356468c94dc515ad6ad8, type: 2}
-  enemyType2: {fileID: 1264235976770674, guid: bd8e4b72826cb1846bc34e1b57f7c812, type: 2}
+  enemyType2: {fileID: 1835125671111632, guid: 28fcd54e26e4a7b40b5629ad697cfc8b, type: 2}
   enemyLeftInWave: 0
 --- !u!4 &1373226042
 Transform:
@@ -347,7 +347,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4547127444070966, guid: 1fa1c3cedc6dd8541956f45bb183cd88, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 6.15
+      value: -4.57
       objectReference: {fileID: 0}
     - target: {fileID: 4547127444070966, guid: 1fa1c3cedc6dd8541956f45bb183cd88, type: 2}
       propertyPath: m_LocalPosition.y
@@ -355,7 +355,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4547127444070966, guid: 1fa1c3cedc6dd8541956f45bb183cd88, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 4.4
       objectReference: {fileID: 0}
     - target: {fileID: 4547127444070966, guid: 1fa1c3cedc6dd8541956f45bb183cd88, type: 2}
       propertyPath: m_LocalRotation.x
