@@ -28,9 +28,9 @@ public class Break : MonoBehaviour {
         controller = GameObject.FindWithTag("RHand");
         fbcam = GameObject.FindWithTag("Player");
         float sx = controller.gameObject.transform.position.x;
-        float sz = controller.gameObject.transform.position.y;
+        float sz = controller.gameObject.transform.position.z;
         float cx = fbcam.gameObject.transform.position.x;
-        float cz = fbcam.gameObject.transform.position.y;
+        float cz = fbcam.gameObject.transform.position.z;
         Vector2 s = new Vector2(sx, sz);
         Vector2 c = new Vector2(cx, cz);
         float distance = Vector2.Distance(s, c);
