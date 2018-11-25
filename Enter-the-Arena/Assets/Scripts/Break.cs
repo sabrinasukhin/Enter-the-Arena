@@ -34,12 +34,16 @@ public class Break : MonoBehaviour {
         Vector2 s = new Vector2(sx, sz);
         Vector2 c = new Vector2(cx, cz);
         float distance = Vector2.Distance(s, c);
+        //Switch to OFFENSE MODE
         if (distance > threshold)
         {
+        	FindObjectOfType<AudioManager>().Play("ATKSword");
             gameObject.tag = "Offense";
         }
+        //Switch to DEFENSE MODE
         else if (distance <= threshold)
         {
+        	FindObjectOfType<AudioManager>().Play("DEFSword");
             gameObject.tag = "Defense";
         }
         if (broken) {

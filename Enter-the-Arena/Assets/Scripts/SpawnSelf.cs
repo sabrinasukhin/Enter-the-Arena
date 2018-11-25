@@ -32,7 +32,7 @@ public class SpawnSelf : MonoBehaviour {
 		float theta = Time.deltaTime * angularVel;
 		for(int i = 0; i<4;i++)
 		{
-			locations[i] = new Vector3(location[i].x*Math.Cos(theta)-location[i].z*Math.Sin(theta),0,locations[i].x*Math.Sin(theta)+locations[i].z*Math.Cos(theta));
+			locations[i] = new Vector3(locations[i].x*Mathf.Cos(theta)-locations[i].z*Mathf.Sin(theta),0,locations[i].x*Mathf.Sin(theta)+locations[i].z*Mathf.Cos(theta));
 		}
 	}
 	void spawnPawn()
