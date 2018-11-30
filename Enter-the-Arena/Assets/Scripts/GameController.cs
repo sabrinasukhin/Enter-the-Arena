@@ -20,12 +20,14 @@ public class GameController : MonoBehaviour {
 	public float spawnWait;
 	public GameObject enemyType1;
 	public GameObject enemyType2; 
+	public GameObject menu;
 	public int enemyLeftInWave;
 	
 	// Use this for initialization
 	void Start (){
 		miniWave = new miniW[2];
 
+		//10 Projectiles
 		Vector3[] wave0Spawn = new Vector3[10];
 		for(int i = 0; i < 10; i++) {
 			wave0Spawn[i] = new Vector3(i*5, 2, i*5);
@@ -33,6 +35,7 @@ public class GameController : MonoBehaviour {
 		miniW wave0 = new miniW(10, enemyType1, wave0Spawn);
 		miniWave[0] = wave0;
 
+		//2 Kings
 		Vector3[] wave1Spawn = new Vector3[2];
 		wave1Spawn[0] = new Vector3(10, 1, 15);
 		wave1Spawn[1] = new Vector3(-10, 1, -15);
@@ -52,8 +55,12 @@ public class GameController : MonoBehaviour {
 			spawn(miniWave[i]); //Miniwave is one miniwave. loop through the miniwaves to spawn an entire wave.
 			yield return new WaitUntil(()=>enemyLeftInWave < 1);
 
+			menu.transform.position = Vector3.zero;
+			Instantiate(menu);
+			GameObject.Find("GameController").GetComponent<GameController>().enemyLeftInWave += 1;
 			//Eventually change to waiting for player to hit start next wave block
-			yield return new WaitForSeconds(spawnWait);
+			//yield return new WaitForSeconds(spawnWait);
+			yield return new WaitUntil(() => GameObject.ReferenceEquals(menu, null));
 		}		
 	}
 	
