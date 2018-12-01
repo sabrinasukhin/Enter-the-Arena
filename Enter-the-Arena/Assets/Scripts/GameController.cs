@@ -37,8 +37,8 @@ public class GameController : MonoBehaviour {
 
 		//2 Kings
 		Vector3[] wave1Spawn = new Vector3[2];
-		wave1Spawn[0] = new Vector3(10, 1, 15);
-		wave1Spawn[1] = new Vector3(-10, 1, -15);
+		wave1Spawn[0] = new Vector3(0.5f, 1, 0.5f);
+		wave1Spawn[1] = new Vector3(-0.5f, 1, -0.5f);
 		miniW wave1 = new miniW(2, enemyType2, wave1Spawn);
 		miniWave[1] = wave1;
 		StartCoroutine(spawnWave());
@@ -51,16 +51,16 @@ public class GameController : MonoBehaviour {
 	}
 	IEnumerator spawnWave(){
 		for (int i = 0; i < miniWave.Length; i++){
-			enemyLeftInWave = miniWave[i].enemyNum;
+            menu.transform.position = new Vector3(0, 0.5f, 0);
+            Instantiate(menu);
+            GameObject.Find("GameController").GetComponent<GameController>().enemyLeftInWave += 1;
+            //Eventually change to waiting for player to hit start next wave block
+            //yield return new WaitForSeconds(spawnWait);
+            yield return new WaitUntil(() => enemyLeftInWave < 1);
+
+            enemyLeftInWave = miniWave[i].enemyNum;
 			spawn(miniWave[i]); //Miniwave is one miniwave. loop through the miniwaves to spawn an entire wave.
 			yield return new WaitUntil(()=>enemyLeftInWave < 1);
-
-			menu.transform.position = Vector3.zero;
-			Instantiate(menu);
-			GameObject.Find("GameController").GetComponent<GameController>().enemyLeftInWave += 1;
-			//Eventually change to waiting for player to hit start next wave block
-			//yield return new WaitForSeconds(spawnWait);
-			yield return new WaitUntil(() => GameObject.ReferenceEquals(menu, null));
 		}		
 	}
 	

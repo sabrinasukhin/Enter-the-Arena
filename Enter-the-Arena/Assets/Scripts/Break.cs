@@ -7,6 +7,8 @@ public class Break : MonoBehaviour {
 	private GameObject player; //Not applied yet, look at Start for more info
 	private GameObject fbcam;
     private GameObject controller;
+    public Material omat;
+    public Material dmat;
 	public float threshold = 3f;
 	private bool broken = false;
 	private float timer = 0;
@@ -39,12 +41,14 @@ public class Break : MonoBehaviour {
         {
         	FindObjectOfType<AudioManager>().Play("ATKSword");
             gameObject.tag = "Offense";
+            gameObject.GetComponent<Renderer>().material = omat;
         }
         //Switch to DEFENSE MODE
         else if (distance <= threshold && (gameObject.tag == "Untagged" || gameObject.tag == "Offense") )
         {
         	FindObjectOfType<AudioManager>().Play("DEFSword");
             gameObject.tag = "Defense";
+            gameObject.GetComponent<Renderer>().material = dmat;
         }
         if (broken) {
             if (gameObject.tag == "Defense")

@@ -32,4 +32,12 @@ public class Projectile : MonoBehaviour {
         }
     }
 
+    void Update()
+    {
+        if(transform.position.y < 0)
+        {
+            Destroy(gameObject);
+            GameObject.Find("GameController").GetComponent<GameController>().enemyLeftInWave -= 1;
+        }
+    }
 }
