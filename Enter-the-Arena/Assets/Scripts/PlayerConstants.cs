@@ -9,6 +9,7 @@ public class PlayerConstants: MonoBehaviour {
 	void Update () {
 		if (health<=0){
             Destroy(gameObject);
+            Time.timeScale = 0;
 		}
 	}
 	

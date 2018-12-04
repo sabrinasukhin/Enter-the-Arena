@@ -273,7 +273,12 @@ ModelImporter:
     4300084: r_ball
     4300086: r_heel
     4300088: r_foot
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hilt_highlight_shdr
+    second: {fileID: 2100000, guid: f5d36cffc785cff4a99f41db154ab569, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
