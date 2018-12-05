@@ -19,7 +19,7 @@ public class Break : MonoBehaviour {
 	void Start() {
 		//Add something in here later on that prevents the sword from hurting the person holding it
 		//Physics.IgnoreCollision(sword.GetComponent<Collider>(), Player.instance.headCollider );
-		fbcam = GameObject.FindWithTag("Player");
+		fbcam = GameObject.FindWithTag("MainCamera");
         controller = GameObject.FindWithTag("RHand");
 		sword = GetComponent<Rigidbody>();
 		rend = GetComponent<Renderer>();
@@ -28,7 +28,6 @@ public class Break : MonoBehaviour {
 	
 	void Update() {
         controller = GameObject.FindWithTag("RHand");
-        fbcam = GameObject.FindWithTag("Player");
         float sx = controller.gameObject.transform.position.x;
         float sz = controller.gameObject.transform.position.z;
         float cx = fbcam.gameObject.transform.position.x;

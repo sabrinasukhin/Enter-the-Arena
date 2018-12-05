@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class GameController : MonoBehaviour {
 	public class miniW{
 		public int enemyNum;
@@ -29,9 +29,10 @@ public class GameController : MonoBehaviour {
 
 		//10 Projectiles
 		Vector3[] wave0Spawn = new Vector3[10];
-		for(int i = 0; i < 10; i++) {
-			wave0Spawn[i] = new Vector3(i*5, 2, i*5);
-		}
+        for (int i = 0; i < 10; i++)
+        {
+            wave0Spawn[i] = new Vector3(7f * (float)Math.Cos(0.2 * i * Math.PI), 2, 7f * (float)Math.Sin(0.2 * i * Math.PI));
+        }
 		miniW wave0 = new miniW(10, enemyType1, wave0Spawn);
 		miniWave[0] = wave0;
 
@@ -43,10 +44,11 @@ public class GameController : MonoBehaviour {
 		miniWave[1] = wave1;
 		StartCoroutine(spawnWave());
 	}
-	void spawn (miniW miniWave){
+	IEnumerator spawn (miniW miniWave){
 		for (int i = 0; i<miniWave.enemyNum; i++){
 			miniWave.enemies.transform.position = miniWave.spawn[i];
 			Instantiate(miniWave.enemies);
+            yield return new WaitForSeconds(1);
 		}
 	}
 	IEnumerator spawnWave(){
@@ -59,7 +61,7 @@ public class GameController : MonoBehaviour {
             yield return new WaitUntil(() => enemyLeftInWave < 1);
 
             enemyLeftInWave = miniWave[i].enemyNum;
-			spawn(miniWave[i]); //Miniwave is one miniwave. loop through the miniwaves to spawn an entire wave.
+			StartCoroutine(spawn(miniWave[i])); //Miniwave is one miniwave. loop through the miniwaves to spawn an entire wave.
 			yield return new WaitUntil(()=>enemyLeftInWave < 1);
 		}		
 	}
