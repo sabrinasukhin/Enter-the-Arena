@@ -16,7 +16,7 @@ public class Projectile : MonoBehaviour {
         displacement = player.transform.position - gameObject.transform.position;
         direction = new Vector3 (displacement.x/displacement.magnitude, 0, displacement.z/displacement.magnitude);
         timer = displacement.magnitude/speed;
-        rb.velocity = new Vector3 (speed*direction.x,displacement.y/timer+(4.905f)*timer,speed*direction.z);
+        rb.velocity = new Vector3 (speed*direction.x,(displacement.y/timer+(4.905f)*timer)/**speed/7.0f*/, speed*direction.z);
     }
     private void OnTriggerEnter(Collider collision)
     {

@@ -2,14 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
 public class King : MonoBehaviour {
 
 	private GameObject player;
 	public float speed;
 	public float attackThreshold;
+
+    private Animator _Animator;
+
 	// Use this for initialization
 	void Start () {
-		player = GameObject.FindWithTag("Player");
+	    player = GameObject.FindWithTag("Player");
+        _Animator = GetComponent<Animator>();
+        _Animator.SetBool("UseAltAttack", Random.value <= 0.5f);
 	}
 	
 	// Update is called once per frame
@@ -30,7 +36,7 @@ public class King : MonoBehaviour {
 	}
 
 	void Attack(Vector2 target) {
-		
+        _Animator.SetTrigger("Attack");
 	}
 
 	void Move(Vector2 current, Vector2 target) {

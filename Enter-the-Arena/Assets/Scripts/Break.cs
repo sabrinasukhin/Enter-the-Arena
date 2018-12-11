@@ -14,6 +14,8 @@ public class Break : MonoBehaviour {
 	private float timer = 0;
 	private Renderer rend;
 	private Vector3 og;
+    public AudioSource DEFSound;
+    public AudioSource ATKSound;
 
 	// Use this for initialization
 	void Start() {

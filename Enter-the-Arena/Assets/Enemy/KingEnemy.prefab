@@ -1037,8 +1037,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1835125671111632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 1, z: -0.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -5}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 4472085781678740}
   - {fileID: 4706194505981996}
@@ -1827,7 +1827,7 @@ Animator:
   m_GameObject: {fileID: 1835125671111632}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 880cdf31322ae46598f5b3f9d72ba5e0, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cd241e61726741c42ad629dc64f1ce10, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1848,7 +1848,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1135317853659204, guid: 9e774c55cb1cf4546b7175f4f9c9b507, type: 2}
+  player: {fileID: 0}
+  attackThreshold: 0
   timer: 1
+  speed: 0
 --- !u!114 &114136537937832640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1861,7 +1864,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1135317853659204, guid: 9e774c55cb1cf4546b7175f4f9c9b507, type: 2}
+  player: {fileID: 0}
+  attackThreshold: 0
   timer: 1
+  speed: 0
 --- !u!114 &114621722377992816
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1874,7 +1880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  attackThreshold: 8
+  attackThreshold: 1
 --- !u!114 &114782474035376968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1887,7 +1893,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1135317853659204, guid: 9e774c55cb1cf4546b7175f4f9c9b507, type: 2}
+  player: {fileID: 0}
+  attackThreshold: 0
   timer: 1
+  speed: 0
 --- !u!114 &114910448347861926
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1900,7 +1909,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1135317853659204, guid: 9e774c55cb1cf4546b7175f4f9c9b507, type: 2}
+  player: {fileID: 0}
+  attackThreshold: 0
   timer: 1
+  speed: 0
 --- !u!137 &137162496697220810
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

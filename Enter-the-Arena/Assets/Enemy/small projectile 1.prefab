@@ -26,8 +26,8 @@ GameObject:
   - component: {fileID: 54815098816652350}
   - component: {fileID: 82516635745472736}
   m_Layer: 0
-  m_Name: small projectile
-  m_TagString: Offense
+  m_Name: small projectile 1
+  m_TagString: Defense
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1135317853659204}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.2861222e-16, y: 2, z: 7}
+  m_LocalPosition: {x: -4.1144967, y: 2, z: 5.663119}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -60,7 +60,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 4b903fa93bac8d0408af24b1a296d2b4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
