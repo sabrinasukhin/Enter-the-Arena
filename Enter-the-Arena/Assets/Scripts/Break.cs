@@ -7,6 +7,8 @@ public class Break : MonoBehaviour {
 	private GameObject player; //Not applied yet, look at Start for more info
 	private GameObject fbcam;
     private GameObject controller;
+    public Material omat;
+    public Material dmat;
 	public float threshold = 3f;
 	private bool broken = false;
 	private float timer = 0;
@@ -17,7 +19,7 @@ public class Break : MonoBehaviour {
 	void Start() {
 		//Add something in here later on that prevents the sword from hurting the person holding it
 		//Physics.IgnoreCollision(sword.GetComponent<Collider>(), Player.instance.headCollider );
-		fbcam = GameObject.FindWithTag("Player");
+		fbcam = GameObject.FindWithTag("MainCamera");
         controller = GameObject.FindWithTag("RHand");
 		sword = GetComponent<Rigidbody>();
 		rend = GetComponent<Renderer>();
@@ -26,21 +28,26 @@ public class Break : MonoBehaviour {
 	
 	void Update() {
         controller = GameObject.FindWithTag("RHand");
-        fbcam = GameObject.FindWithTag("Player");
         float sx = controller.gameObject.transform.position.x;
-        float sz = controller.gameObject.transform.position.y;
+        float sz = controller.gameObject.transform.position.z;
         float cx = fbcam.gameObject.transform.position.x;
-        float cz = fbcam.gameObject.transform.position.y;
+        float cz = fbcam.gameObject.transform.position.z;
         Vector2 s = new Vector2(sx, sz);
         Vector2 c = new Vector2(cx, cz);
         float distance = Vector2.Distance(s, c);
-        if (distance > threshold)
+        //Switch to OFFENSE MODE
+        if (distance > threshold && (gameObject.tag == "Untagged" || gameObject.tag == "Defense") )
         {
+        	FindObjectOfType<AudioManager>().Play("ATKSword");
             gameObject.tag = "Offense";
+            gameObject.GetComponent<Renderer>().material = omat;
         }
-        else if (distance <= threshold)
+        //Switch to DEFENSE MODE
+        else if (distance <= threshold && (gameObject.tag == "Untagged" || gameObject.tag == "Offense") )
         {
+        	FindObjectOfType<AudioManager>().Play("DEFSword");
             gameObject.tag = "Defense";
+            gameObject.GetComponent<Renderer>().material = dmat;
         }
         if (broken) {
             if (gameObject.tag == "Defense")
